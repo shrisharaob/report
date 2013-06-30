@@ -2,26 +2,32 @@
 \label{analysis}
 
 \subsection{Selection pf pyramidal cells}
-The pyramidal cells were selected base on spike features and firing rate. 
-Then a gaussian mixture was fit to compute class probabilities.
+The pyramidal cells were selected base on spike features (Spike waveform asymmetry and filtered spike width) \cite{Sirota2008} and firing rate. Pyramidal cells and interneurons were classified by a hyper plane best separating the clusters formed in the feature space. 
 
 \subsection{Cluster Quality}
 
 \subsection{Computing place field}
-The arena was divided into 50 x 50 spatial bins. The rate maps were computed by accumulating the spikes fired by into these spatial bins, which was then normalized by the occupancy time in each bin. 
-[linear, adaptive smoothing]
+\label{pfcompute}
+The arena was divided into 50 x 50 spatial bins. The rate maps were computed by accumulating the spikes fired by into these spatial bins, which was then normalized by the occupancy time in each bin.
+Rate maps were computed only for cells which fired atleast 10 spikes within the duration of a single trial. The resulting rate map was then smoothed with a 2D Gaussian kernel. The smoothed ratemaps were then used for all further analysis.\\ 
+An adaptive smoothing technique was also used to obtain a robust estimation of ratemaps since multiple peaks in the rate maps were observed. This method did not completely eliminate the smaller peaks in the rate maps, which could be due to poor cluster isolation. This technique controls for the trade off between spatial resolution and sampling error \cite{Skaggs1996c}. The radius of a circle $r$, centered at each bin was expanded until it met the criterion :   $ r \geq \frac{\alpha}{N_{Occ} \sqrt{N_{spk}}}$. The firing rate at each bin is then set to $f_{s} \cdot \frac{N_{spk}}{N_{Occ}}$, where $f_{s}$ is the position sampling rate.\\
+
+For computing 1D place fields on the linear track, the position linearized and divided into 100 bins.
+1D place fields were computed separately for both directions by splitting the data into two depending on the heading direction of the animal. The 1D place field was obtained by accumulating the spikes of the selected cells in these bins and normalizing by the occupancy  time. The resulting place tuning curves were then smoothed with a Gaussian window.\\
 
 \subsection{Pairwise analysis}
+
 [direction , multiple subfields]
 
 \subsection{Population vectors}
+\cite{Gothard1996} - pv spatial corr 
 
 \subsection{Trajectory event analysis}
-
+To analyze cell sequences occurring during sleep, the potential 
 \subsubsection{Detection of tentative events}
 
 \subsubsection{Template matching procedure for linear tracks}
 
-\subsubsection{Baysean decoding for 2D place fields}
+\subsubsection{Bayesian decoding for 2D place fields}
 
 	
