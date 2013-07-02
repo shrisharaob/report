@@ -197,7 +197,7 @@
 %-------------------------------------------------   
 \university{\texorpdfstring{\href{http://www.university.com} % Your university's URL
                 {University of T\"{u}bingen}} % Your university's name - this is currently used in the title page
-                {University of T\"{u}bingen}}}
+                {University of T\"{u}bingen}}
 %-------------------------------------------------   
 \UNIVERSITY{\texorpdfstring{\href{University Web Site URL Here (include http://)} % Your university's URL
                 {UNIVERSITY OF T\"{U}BINGEN}} % Your university's name in capitals - this is currently used in the abstract page
