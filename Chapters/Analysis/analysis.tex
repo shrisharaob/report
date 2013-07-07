@@ -4,7 +4,7 @@
 
 Data analysis was done by custom written MATLAB code. 
 \section{Selection pyramidal cells}
-The pyramidal cells were selected base on spike features (Spike waveform asymmetry and filtered spike width) \cite{Sirota2008} and firing rate. The hyperplane best separating the clusters formed in the feature space was used to classify interneuons and pyramidal cells.
+The pyramidal cells were selected based on spike features (Spike waveform asymmetry and filtered spike width) \cite{Sirota2008} and firing rate. The hyperplane best separating the clusters formed in the feature space was used to classify interneurons and pyramidal cells.
 
 \subsection{Cluster Quality}
 
@@ -34,7 +34,7 @@ Population vectors were constructed for every theta cycle. The theta phase with 
 
 \section{Trajectory event analysis}
 \subsection{Linear track}
-The spiking activity during sleep was identified as an event epoch if there were no less than 6 pyramidal cells firing within a time window. Further, it was required that this window was flanked by windows of 100ms with no more than 1 spike. The linearized rate maps were sorted by position of their peak firing rates to obtain the templates of cell order for the two directions on the linear track. The firing sequence in each of the selected event epochs was defined by considering only the first spike fired by each cell. The sequences during pre and post trial sleep was then compared with the template. The rank correlation between each of these sequences and the template was computed. 
+The spiking activity during sleep was identified as an event epoch if there were no less than 6 pyramidal cells firing within a time window. Further, it was required that this window was flanked by windows of 100ms with no more than 1 spike. The linearized rate maps were sorted by position of their peak firing rates to obtain a template of cell sequence for the two possible directions on the linear track. The firing sequence in each of the selected event epochs was defined by considering only the first spike fired by each cell. The sequences during pre and post trial sleep was then compared with the template. The rank correlation between each of these sequences and the template was computed. 
 
 \subsection{Bayesian decoding for 2D place fields}
 The 
