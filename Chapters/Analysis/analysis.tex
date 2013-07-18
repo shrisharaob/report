@@ -1,16 +1,46 @@
-\section{Analysis}
+\chapter{Data Analysis}
 \label{analysis}
+\lhead{Chapter 2. \emph{Data Analysis}} 
+
+Data analysis was done by custom written MATLAB code. 
+\section{Selection pyramidal cells}
+The pyramidal cells were selected based on spike features (Spike waveform asymmetry and filtered spike width) \cite{Sirota2008} and firing rate. The hyperplane best separating the clusters formed in the feature space was used to classify interneurons and pyramidal cells.
+
+\subsection{Cluster Quality}
+
+\section{Computing place field}
+\label{pfcompute}
+The arena was divided into 50 x 50 spatial bins. The rate maps were computed by accumulating the spikes fired by into these spatial bins, which was then normalized by the occupancy time in each bin.
+Rate maps were computed only for cells which fired atleast 10 spikes within the duration of a single trial. The resulting rate map was then smoothed with a 2D Gaussian kernel. The smoothed ratemaps were then used for all further analysis. The location of peak firing rate of the smoothed rate maps was considered as the place field center. Only place cells with a minimum peak firing rate ($1Hz$) were considered for further analysis. The pixels which had firing rate greater than 20 $\pc$ of the peak firing rate were included in then place field.\\ 
+An adaptive smoothing technique was also used to obtain a robust estimation of ratemaps since multiple peaks in the rate maps were observed. This method did not completely eliminate the smaller peaks in the rate maps, these residual peaks might be present due to poor cluster isolation. This technique controls for the trade off between spatial resolution and sampling error \cite{Skaggs1996c}. The radius of a circle $r$, centered at each bin was expanded until it met the criterion :   $ r \geq \frac{\alpha}{N_{Occ} \sqrt{N_{spk}}}$. The firing rate at each bin is then set to $f_{s} \cdot \frac{N_{spk}}{N_{Occ}}$, where $f_{s}$ is the position sampling rate.\\
+Several place field parameters were computed for later analysis and selection of ideal place fields. Ideal here implies that the place field has only one localized peak. The spatial coherence is defined as the $z-$ transformed correlation between the firing rate in each bin and the mean firing rate of its 8 nearest-neighbors \cite{Muller1989}. Spatial coherence is a measure of local smoothness of the place field.\\
+Sparsity is defined as : $\frac{(\Sigma p_{i} \lambda_{i})^{2}}{\Sigma p_{i} \lambda^{2}_{i}}$, where $p_{i}$ is the occupancy of bin $i$ and $\lambda_{i}$ is the firing mean firing rate in bin $i$. Sparsity is a measure of spatial selectivity. Smaller the sparsity, higher the spatial tuning. For a cell with uniform firing in all bins, the sparsity would be 1. \\
+\st{Entropy} \\
+
+For computing 1D place fields on the linear track, the position linearized and divided into 100 bins.
+1D place fields were computed separately for both directions by splitting the data into two depending on the heading direction of the animal. The 1D place field was obtained by accumulating the spikes of the selected cells in these bins and normalizing by the occupancy  time. The resulting place tuning curves were then smoothed with a Gaussian window.\\
+
+\section{Pairwise analysis}
+Cross corrlellograms(CCG) were computed to asses the firing pairwise correlations. CCGs were computed for cell pairs with overlapping place fields. The offset in the CCG if any, would be indicative of the sequential activation of the pair along the trajectory of the animal. [offset seq compression]The trajectories through the overlapping place fields were separated into two directions (from one cell peak to the other and vice versa) by projecting the velocity at each sampled point onto the line segment connecting the place field peaks. If all the traversals through the overlapping fields are considered, regardless of the heading direction then the CCG peak will always occur at zero time offset, given equal sampling of both directions. All the ccg parameters calculated were obtained form smoothed CCG. \\
+To test the significance of the short time correlations, spike times were resampled by introducing jitter. The jitter window size was chosen to destroy the short time correlations. The CCG and its parameters were recomputed yielding the sampling distributions of the CCG parameters.
+
+\st{The offset was calculated as a function of theta cycle and to obtain a robust estimate of the offset, the intercept of the best fitting line through the individual offsets was considered as the offset for a cell pair.} 
+The offsets further away from zero time lag actually do not carry much information about the short time scale offset, so the time lag of the first peak closest to zero lag was considered as the estimate of the time  offset. \\
+For place cells with multiple place fields, the overlapping sub-field pairs were selected and the CCG was computed for spikes occurring inside the place fields for each of the individual overlapping sub-fields. Since some of the sub-fields were present in regions of low occupancy, only sub-fields with sufficient occupancy were selected ().For sessions with several trials in the same environment, the only sub-fields that were present in all the trials were considered. \\
+
+\section{Population vectors}
+Population vectors were constructed for every theta cycle. The theta phase with the lowest spike count for the whole trial was defined as the theta cycle boundaries. For each theta cycle and each spatial bin the population vector consisted of the the spike count of all the cells in that bin. The reference population vector was the stacked mean rate maps. The dot product of the population vector in every theta cycle and the reference vector is a measure of degree similarity of the population activity to that of the reference vector. To test the significance, the cell identities were randomly permuted in each theta cycle and the dot product was recomputed. 
+
+To compare the pairwise population activity across multiple environments, covaration vectors were generated. 
+\cite{Gothard1996} - pv spatial corr 
+
+\section{Trajectory event analysis}
+\subsection{Linear track}
+The spiking activity during sleep was identified as an event epoch if there were no less than 6 pyramidal cells firing within a time window. Further, it was required that this window was flanked by windows of 100ms with no more than 1 spike. The linearized rate maps were sorted by position of their peak firing rates to obtain a template of cell sequence for the two possible directions on the linear track. The firing sequence in each of the selected event epochs was defined by considering only the first spike fired by each cell. The sequences during pre and post trial sleep were then compared with the template. The rank correlation between each of these sequences and the template was computed. \\ 
+The significance of the detected sequences was determined by scrambling the cell identities in the template to generate new templates. This procedure yielded the sampling distribution of the observed correlation value for each event, when the resampled templates were correlated with the event sequence cell order. \\
 
 
-The pyramidal cells were selected base on spike features and firing rate. 
-Then a gaussian mixture was fit to compute class probabilities.
 
-\subsection{Place field}
-The arena was divided into 50 x 50 spatial bins. The rate maps were computed by accumulating the spikes fired by into these spatial bins, which was then normalized by the occupancy time in each bin. 
-
-
-
-
-
-
+\subsection{Bayesian decoding for 2D place fields}
+The 
 	
