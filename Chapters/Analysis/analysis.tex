@@ -40,5 +40,14 @@ The spiking activity during sleep was identified as an event epoch if there were
 The significance of the detected sequences was determined by scrambling the cell identities in the template to generate new templates. This procedure yielded the sampling distribution of the observed correlation value for each event, when the resampled templates were correlated with the event sequence cell order. \\
 
 \subsection{Bayesian decoding for 2D place fields}
-The 
+To analyse the population events that occurred before and after the animal explored in a 2D arena, a Bayesian decoding approach was employed. The average rate maps and the spike counts in a time window were used to decode the positions that were represented by the sequences that occurred during the populations events. \\
+Given the spike counts, 
+%\begin{equation}
+%P(\mathbf{n} | \mathbf{x}) = \prod_{i = 1}^{N} P(n_{i} | \mathbf{x}) = \prod_{i = 1}^{N} \frac{(\tau f_{i}(\mathbf{x}))^{n_{i}}}{n_{i} !} e^{-\tau f_{i}		%(\mathbf{x})}
+%\end{equation}
+\[ 
+P(\mathbf{n} | \mathbf{x}) = \prod_{i = 1}^{N} P(n_{i} | \mathbf{x}) = \prod_{i = 1}^{N} \frac{(\tau f_{i}(\mathbf{x}))^{n_{i}}}{n_{i} !} \emph{e}^{-\tau f_{i}(\mathbf{x})}
+ \]
+
+
 	
