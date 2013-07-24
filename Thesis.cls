@@ -112,7 +112,7 @@
 \newtheorem{definition}[theorem]{Definition}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
-\usepackage[centerlast,small,sc]{caption}
+\usepackage[normal,small,sc]{caption} % changed caption centerlast to normal - now removes the strange centering of the last caption line - shrisha
 \setlength{\captionmargin}{20pt}
 \newcommand{\fref}[1]{Figure~\ref{#1}}
 \newcommand{\tref}[1]{Table~\ref{#1}}
@@ -132,7 +132,7 @@
 \setcounter{dbltopnumber}{9}
 \usepackage{graphicx}
 \usepackage{epstopdf}
-\usepackage[scriptsize]{subfigure}
+\usepackage[scriptsize, FIGTOPCAP, hang, nooneline]{subfigure} % added FIGTOPCAP - shrisha, subfig label on top
 \usepackage{booktabs}
 \usepackage{rotating}
 \usepackage{listings}
