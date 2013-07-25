@@ -112,7 +112,8 @@
 \newtheorem{definition}[theorem]{Definition}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
-\usepackage[normal,small,sc]{caption} % changed caption centerlast to normal - now removes the strange centering of the last caption line - shrisha
+% changed caption centerlast to normal - now removes the strange centering of the last caption line - shrisha
+\usepackage[normal,small,sc]{caption} 
 \setlength{\captionmargin}{20pt}
 \newcommand{\fref}[1]{Figure~\ref{#1}}
 \newcommand{\tref}[1]{Table~\ref{#1}}
