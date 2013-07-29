@@ -151,7 +151,7 @@
 \usepackage[pdfpagemode={UseOutlines},bookmarks=true,bookmarksopen=true,
    bookmarksopenlevel=0,bookmarksnumbered=true,hypertexnames=false,
    colorlinks,linkcolor={blue},citecolor={blue},urlcolor={red},
-   pdfstartview={FitV},unicode,breaklinks=true]{hyperref}
+   pdfstartview={FitV},unicode,breaklinks=true]{hyperref} % changed the hyper links colors to black from blue, shrisha 
 \pdfstringdefDisableCommands{
    \let\\\space
 }
