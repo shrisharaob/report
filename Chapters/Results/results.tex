@@ -3,10 +3,8 @@
 \lhead{Chapter 3. \emph{Results}} 
 
 The primary objective was to explore and search for patterns in the single and population place cell activity which help in understanding the mechanisms of sequential place cell activity during different behavioural states. Initially the single place cell properties across similar and different environments was characterized.  \\
-\st{Some of the results listed lack conclusive evidence in due to insufficient data, especially stable place cells. }
 
-\section{Single cell}
-\subsection[Place cell firing in same environment]{The place cells maintain their firing rates across multiple sessions in the same environment}
+\section[Place cell firing in same environment]{The place cells maintain their firing rates across \\ multiple sessions in the same environment}
 
 %%---------------------
 %% ratemaps
@@ -41,11 +39,11 @@ The primary objective was to explore and search for patterns in the single and p
 \begin{figure}[htb!]
 \centering
 \subfigure[]{
-\includegraphics[scale = .5]{../figures/report/RateRemapping_pkRateMat_CA3_bigSquare.pdf}
+\includegraphics[scale = 1]{../figures/report/RateRemapping_pkRateMat_CA3_bigSquare.pdf}
 \label{fig:sf1}
 }
 \subfigure[]{
-\includegraphics[scale = .5]{../figures/report/RateRemapping_pkRateMat_CA1_bigSquare.pdf}
+\includegraphics[scale = 1]{../figures/report/RateRemapping_pkRateMat_CA1_bigSquare.pdf}
 \label{fig:sf2}
 }
 
@@ -54,7 +52,7 @@ The primary objective was to explore and search for patterns in the single and p
 \label{fig:sf3}
 }
 \subfigure[]{
-\includegraphics[scale = .5]{../figures/report/RateRemapping_pkRateMat_CA1_linear.pdf}
+\includegraphics[scale = 1]{../figures/report/RateRemapping_pkRateMat_CA1_linear.pdf}
 \label{fig:sf4}
 }
 \label{fig:rateremapping}
@@ -69,30 +67,28 @@ The primary objective was to explore and search for patterns in the single and p
 \begin{figure}[htb!]
 \centering
 \subfigure[]{
-\includegraphics[scale = .4]{../figures/report/pkDistMat_CA3_bigSquare.pdf}
+\includegraphics[scale = 1]{../figures/report/pkDistMat_CA3_bigSquare.pdf}
 \label{fig:sf1}
 }
 \subfigure[]{
-\includegraphics[scale = .4]{../figures/report/pkDistMat_CA1_bigSquare.pdf}
+\includegraphics[scale = 1]{../figures/report/pkDistMat_CA1_bigSquare.pdf}
 \label{fig:sf2}
 }
 
-\subfigure[]{
-\includegraphics[scale = .4]{../figures/report/pkDistMat_CA3_linear.pdf}
-\label{fig:sf3}
-}
-\subfigure[]{
-\includegraphics[scale = .4]{../figures/report/pkDistMat_CA1_linear.pdf}
-\label{fig:sf4}
-}
+%\subfigure[]{
+%\includegraphics[scale = .4]{../figures/report/pkDistMat_CA3_linear.pdf}
+%\label{fig:sf3}
+%}
+%\subfigure[]{
+%\includegraphics[scale = .4]{../figures/report/pkDistMat_CA1_linear.pdf}
+%\label{fig:sf4}
+%}
 \label{fig:pkDist}
-\caption[Place field Peak distances]{Scatter plots of of place cells pooled from CA1 and CA3  across the same environment. The abscissa represents the mean firing rates of place cells with single place fields in a recording session. The ordinate represents the mean firing rate of the same cell in another recording session in the same environment. \subref{fig:sf1} CA3 place cells in \emph{Square} enclosure, \subref{fig:sf2} CA1 place cells in \emph{Square} enclosure, \subref{fig:sf3} CA3 place cells in \emph{Linear} enclosure, \subref{fig:sf4} CA1 place cells in \emph{Linear} enclosure}
+\caption[Place field Peak distances]{Scatter plots of the peak distance between the peaks of place cells which are active across several sessions and posses a single place field in the same environment. Data pooled from CA1 and CA3  from all sessions in the same environment.  \subref{fig:sf1} CA3 place cells in \emph{Square} enclosure, \subref{fig:sf2} CA1 place cells in \emph{Square} enclosure} %, \subref{fig:sf3} CA3 place cells on \emph{Linear} track, \subref{fig:sf4} CA1 place cells on \emph{Linear} track}
 \end{figure}
 It was observed that the firing rate of place cells in is reliable across multiple sessions in the same environment. It would be expected that the cells with higher firing rates have comparable firing rates across multiple exposure of the animal to the same environment, if higher firing rates imply a stable representation. 
 
-\subsection[Sparse encoding]{The neural representation of spatial information is sparse(stats?)}
-%(\# of common cells)
-\subsection[Multiple Place fields]{Place cells have multiple spatial receptive fields}
+\section[Multiple Place fields]{Place cells have multiple spatial receptive fields}
 %%---------------------------------
 %% subfields
 %%---------------------------------
@@ -110,17 +106,16 @@ It was observed that the firing rate of place cells in is reliable across multip
 \caption[Multiple receptive fields of Place Cells]{The distribution of number of distinct place fields of a single cells. Only receptive fields with a peak rates above the 20 \% of the overall peak rate were chosen. The sub-fields with area less than the threshold were not considered as sub-fields. The threshold was computed relative to the area of the sub-field with the maximum firing rate \subref{fig:sf1} CA3 place cells in square enclosure \subref{fig:sf2} CA1 place cells in square enclosure}
 \end{figure}
 
-\section{Pairwise activity}
 
-\section{Population Activity}
-\subsection[Population activity within a fixed environment]{The place cell population has reliable representation of an environment}
+
+\section[Population activity within a fixed environment]{The place cell population has reliable representation of an environment}
 
 %%--------------
 %% pv bS 
 %%--------------
 \begin{figure}[htb!]
 \centering
-\includegraphics[scale = .6]{../figures/report/CA3.InstantPV.pdf}
+\includegraphics[scale = 1]{../figures/report/CA3.InstantPV.pdf}
 \label{fig:sf1}
 \caption{Dot product of population vector for each theta cycle and the stacked average rate map at the end of the trial.}
 \end{figure}
@@ -149,6 +144,10 @@ It was observed that the firing rate of place cells in is reliable across multip
 \caption[Population Vector time course]{Examples of dot product of average rate maps within different segments and the average rate map. The black squares show the mean across all the rats and recording sessions, the gray circles are the values for individual sessions, dot products for recording in square enclosure in \subref{fig:sf2} CA3, \subref{fig:sf3} CA1. Dot products for recording in Linear track in \subref{fig:sf4} CA3, \subref{fig:sf5} CA1}
 \end{figure}
 
+%%----------------------------------
+%% pv chunk pool
+%%----------------------------------
+
 \begin{figure}[htb!]
 \centering
 \subfigure{
@@ -170,24 +169,60 @@ It was observed that the firing rate of place cells in is reliable across multip
 \caption[CA3 Population Vector analysis]{The whole recording session was split into three segments and the average population vectors compared. Scatter plots of dot products in Square enclosure in \subref{fig:sf1} CA3 population, \subref{fig:sf2} CA1 population and linear track \subref{fig:sf3} CA3 \subref{fig:sf4} CA1}
 \end{figure}
 
-When an animal is introduced to a familiar environment the network has to identify the reference frame from the sensory cues available and the previously learnt associations. The population population activity would be very informative of how this is achieved.\\[5cm]
+When an animal is introduced to a familiar environment the network has to identify the reference frame from the sensory cues available and the previously learnt associations. The population population activity would be very informative of how this is achieved. 
+%%----------------------------------------------
+%% Cofiring likelihood
+%%---------------------------------------------
+\section{Cofiring likelihood}
+\begin{figure}[H]
+\centering
+\subfigure{
+\includegraphics[scale = .5]{../figures/report/CofiringVsDist_CA3_bigSquare.pdf}
+\label{fig:sf2}
+}
+\subfigure{
+\includegraphics[scale = .5]{../figures/report/CofiringVsDist_CA3_bigSquare.pdf}
+\label{fig:sf3}
+}
+\end{figure}
 
-\subsection{Cell sequences}
-\begin{figure}[HTB!]
+\section{ Cell sequences}
+\begin{figure}[H]
 \centering
 \subfigure[]{
-\includegraphics[scale = .5, width =7cm]{../figures/report/Post.CA3.kenji.gt5Cells.pdf}
+\includegraphics[scale = .5]{../figures/report/Post.CA3.kenji.gt5Cells.pdf}
 \label{fig:sf1}
 }
 \subfigure[     ]{
-\includegraphics[scale = .5, width =7cm]{../figures/report/Pre.CA3.kenji.gt5Cells.pdf}
+\includegraphics[scale = .5]{../figures/report/Pre.CA3.kenji.gt5Cells.pdf}
 \label{fig:sf2}
 }
 \subfigure[]{
-\includegraphics[scale = .5, width =7cm]{../figures/report/Pre.CA1.kenji.gt5Cells.pdf}
+\includegraphics[scale = .5]{../figures/report/Post.CA3.kenji.gt5Cells.pdf} % >>>>>>>> TEST <<<<<<<<<<<
 \label{fig:sf3}
 }
-\caption[CA3 post-trial sleep template match analysis]{The distribution of correlation values of the the cell sequence order and the }
+\subfigure[]{
+\includegraphics[scale = .5]{../figures/report/Pre.CA1.kenji.gt5Cells.pdf}
+\label{fig:sf4}
+}
+\caption[Template matching analysis]{The distribution of correlation values of the the cell sequence order during detected population events and the template. The correlation values are for sequences which had a at least 6 distinct cells active in the detection window. \subref{fig:sf1} Post-trial sleep events in CA3,  \subref{fig:sf2} Pre-trial sleep event in tCA3, \subref{fig:sf3} Post-trial events in CA1,  \subref{fig:sf4} Pre-trial events in CA1. Inset in each figure shows the count of sequence lengths of all the detected events.}
 \label{tmcorr}
 \end{figure}
-\section{}
+%%-----------------------------------------------
+%% pre-2-post
+%%-----------------------------------------------
+\begin{figure}[H!]
+\centering
+\subfigure[]{
+\includegraphics[scale = 1]{../figures/report/pre2post_CA3.pdf}
+\label{fig:sf1}
+}
+\subfigure[]{
+%\includegraphics[scale = 1]{../figures/report/pre2post_CA3.pdf}
+\label{fig:sf2}
+}
+\label{pre2post}
+\caption{The number of significant cell sequences in pre and post trial sleep, \subref{fig:sf1} CA3, \subref{fig:sf2} CA1}
+\end{figure}
+%\section[Sparse encoding]{The neural representation of spatial information is sparse (stats?)}
+%(\# of common cells)
