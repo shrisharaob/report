@@ -3,8 +3,7 @@
 \lhead{Chapter 2. \emph{Data Analysis}} 
 
 \section{Data}
-The preprocessed dataset used in this study was obtained from [....... ?] . The data collection and preprocessing is described in \citep{Mizuseki2012}. 
-Data analysis was done by \todo{test comment} custom written MATLAB code. A MATLAB class library was developed as a part of the work. 
+The preprocessed dataset used in this study the one obtained in the recordings in the study by Mizuseki et. al \cite{Mizuseki2012}. Data analysis was done by \todo{test comment} custom written MATLAB code. A MATLAB class library was developed as a part of the work. 
 
 \section{Selection pyramidal cells}
 The pyramidal cells were selected based on spike features (Spike waveform asymmetry and filtered spike width) \cite{Sirota2008} and firing rate. The hyperplane best separating the clusters formed in the feature space was used to classify interneurons and pyramidal cells.
@@ -18,7 +17,6 @@ Rate maps were computed only for cells which fired at least 10 spikes within the
 An adaptive smoothing technique was employed to obtain a robust estimation of ratemaps since multiple peaks in the rate maps were observed. This method did not completely eliminate the smaller peaks in the rate maps, these residual peaks might be present due to poor cluster isolation. This technique controls for the trade off between spatial resolution and sampling error \cite{Skaggs1996c}. The radius of a circle $r$, centred at each bin was expanded until it met the criterion :   $ r \geq \frac{\alpha}{N_{Occ} \sqrt{N_{spk}}}$. The firing rate at each bin is then set to $f_{s} \cdot \frac{N_{spk}}{N_{Occ}}$, where $f_{s}$ is the position sampling rate.\\
 Several place field parameters were computed for later analysis and selection of ideal place fields. Ideal here implies that the place field has only one localized peak. The spatial coherence is defined as the $z-$ transformed correlation between the firing rate in each bin and the mean firing rate of its 8 nearest-neighbors \cite{Muller1989}. Spatial coherence is a measure of local smoothness of the place field.\\
 Sparsity is defined as : $\frac{(\Sigma p_{i} \lambda_{i})^{2}}{\Sigma p_{i} \lambda^{2}_{i}}$, where $p_{i}$ is the occupancy of bin $i$ and $\lambda_{i}$ is the firing mean firing rate in bin $i$. Sparsity is a measure of spatial selectivity. Smaller the sparsity, higher the spatial tuning. For a cell with uniform firing in all bins, the sparsity would be 1. \\
-\st{Entropy} \\
 
 For computing 1D place fields on the linear track, the position was linearised and divided into 100 bins.
 1D place fields were computed separately for both directions by splitting the data into two depending on the heading direction of the animal. The 1D place field was obtained by accumulating the spikes of the selected cells in these bins and normalizing by the occupancy  time. The resulting place tuning curves were then smoothed with a Gaussian window.\\
@@ -27,9 +25,7 @@ For computing 1D place fields on the linear track, the position was linearised a
 Cross corrlellograms(CCG) were computed to asses the firing pairwise correlations. CCGs were computed for cell pairs with overlapping place fields. The offset in the CCG if any, would be indicative of the sequential activation of the pair along the trajectory of the animal. [offset seq compression]The trajectories through the overlapping place fields were separated into two directions (from one cell peak to the other and vice versa) by projecting the velocity at each sampled point onto the line segment connecting the place field peaks. If all the traversals through the overlapping fields are considered, regardless of the heading direction then the CCG peak will always occur at zero time offset, given equal sampling of both directions. All the ccg parameters calculated were obtained form smoothed CCG. \\
 To test the significance of the short time correlations, spike times were resampled by introducing jitter. The jitter window size was chosen to destroy the short time correlations. The CCG and its parameters were recomputed yielding the sampling distributions of the CCG parameters.
 
-\st{The offset was calculated as a function of theta cycle and to obtain a robust estimate of the offset, the intercept of the best fitting line through the individual offsets was considered as the offset for a cell pair.} 
-The offsets further away from zero time lag actually do not carry much information about the short time scale offset, so the time lag of the first peak closest to zero lag was considered as the estimate of the time  offset. \\
-For place cells with multiple place fields, the overlapping sub-field pairs were selected and the CCG was computed for spikes occurring inside the place fields for each of the individual overlapping sub-fields. Since some of the sub-fields were present in regions of low occupancy, only sub-fields with sufficient occupancy were selected ().For sessions with several trials in the same environment, the only sub-fields that were present in all the trials were considered. \\ %[overlapping contours  and sub-contours, peak distances]
+The offset was calculated as a function of theta cycle and to obtain a robust estimate of the offset a cell pair, the intercept of the best fitting line through the individual offsets was considered as the offset for a cell pair (provides a better estimate when cells skip firing in some theta cycles). For place cells with multiple place fields, the overlapping sub-field pairs were selected and the CCG was computed for spikes occurring inside the place fields for each of the individual overlapping sub-fields. Since some of the sub-fields were present in regions of low occupancy, only sub-fields with sufficient occupancy were selected, by discarding all sub-fields with an area smaller than an absolute threshold set which was set for each cell relative to its place field with maximum firing rate. For sessions with several trials in the same environment, the only sub-fields that were present in all the trials were considered. \\ %[overlapping contours  and sub-contours, peak distances]
 
 \emph{Cofiring likelihood : } This is a measure that was constructed to quantify the the cofiring probability of pairs of cells. For all the cell pairs in a recording, a cofiring event is detected if a pair happens to fire in a time window (100ms). The complete recording session is divided into segments of the length of the time window and the cofiring likelihood for a pair is defined as the ratio of number of cofiring events for that pair and the total number of windows and to control for firing rate changes, the cofiring likelihood by chance was subtracted. The chance level was computed by resampling(M = 1000) from jittered spike times and computing the cofiring likelihood for the jittered spikes.
 
@@ -46,13 +42,13 @@ The significance of the detected sequences was determined by scrambling the cell
 The 
 
 \subsection{Bayesian decoding for 2D place fields}
-To analyse the population events that occurred before and after the animal explored in a 2D arena, a Bayesian decoding approach was employed. The average rate maps and the spike counts in a time window were used to decode the positions that were represented by the sequences that occurred during the populations events. \\
-Given the spike counts, 
+To analyse the population events that occurred before and after the animal explored in a 2D arena, a Bayesian decoding approach was employed. The average rate maps and the time binned spike counts were used to decode the positions that were represented by the sequences that occurred during the populations events. \\
+Given the spike counts $\mathbf{n}$, the posterior distribution of the position is given by : 
 %\begin{equation}
-%P(\mathbf{n} | \mathbf{x}) = \prod_{i = 1}^{N} P(n_{i} | \mathbf{x}) = \prod_{i = 1}^{N} \frac{(\tau f_{i}(\mathbf{x}))^{n_{i}}}{n_{i} !} e^{-\tau f_{i}		%(\mathbf{x})}
+%P(\mathbf{n} | \mathbf{x}) = \prod_{i = 1}^{N} P(n_{i} | \mathbf{x}) = \prod_{i = 1}^{N} \frac{(\tau f_{i}(\mathbf{x}))^{n_{i}}}{n_{i} !} e^{-\tau f_{i}		% (\mathbf{x})}P(\mathbf{n} | \mathbf{x}) = \prod_{i = 1}^{N} P(n_{i} | \mathbf{x}) = \prod_{i = 1}^{N} \frac{(\tau f_{i}(\mathbf{x}))^{n_{i}}}{n_{i} !} \emph{e}^{-\tau f_{i}(\mathbf{x})}
 %\end{equation}
 \[ 
-P(\mathbf{n} | \mathbf{x}) = \prod_{i = 1}^{N} P(n_{i} | \mathbf{x}) = \prod_{i = 1}^{N} \frac{(\tau f_{i}(\mathbf{x}))^{n_{i}}}{n_{i} !} \emph{e}^{-\tau f_{i}(\mathbf{x})}
+P( \mathbf{x} | \mathbf{n}) = C(\tau, \mathbf{n}) P(\mathbf{x}) \left(\prod_{i = 1}^{N} f_{i}(\mathbf{x})^{n_i} \right) \emph{e}^{-\tau \sum\limits_{i = 1}^{N} f_{i}(\mathbf{x}) }
  \]
 
 

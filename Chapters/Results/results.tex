@@ -2,7 +2,7 @@
 \label{results}
 \lhead{Chapter 3. \emph{Results}} 
 
-The primary objective was to explore and search for patterns in the single and population place cell activity which help in understanding the mechanisms of sequential place cell activity during different behavioural states. Initially the single place cell properties across similar and different environments was characterized.  \\
+The primary objective was to explore and search for patterns in the single and population place cell activity which help in understanding the mechanisms of sequential place cell activity during different behavioural states. Initially the single place cell properties across similar and different environments was characterized. Subsequently, pairwise properties were studied followed by population activity. \\
 
 \section[Place cell firing in same environment]{The place cells maintain their firing rates across \\ multiple sessions in the same environment}
 
@@ -14,24 +14,24 @@ The primary objective was to explore and search for patterns in the single and p
 \centering
 \subfigure[]{
 \includegraphics[scale = .5]{../figures/report/ratemaps/CA3_bigSquare/ec013.961_974.ec013.970.pdf}
-\label{fig:sf1}
+\label{fig:rmsf1}
 }
 \subfigure[]{
 \includegraphics[scale = .5]{../figures/report/ratemaps/CA3_bigSquare/ec016.1025_1048.ec016.1048.pdf}
-\label{fig:sf2}
+\label{fig:rmsf2}
 }
 \subfigure[]{
 \includegraphics[scale = .5]{../figures/report/ratemaps/CA1_bigSquare/ec014.329_340.ec014.333.pdf}
-\label{fig:sf3}
+\label{fig:rmsf3}
 }
 \subfigure[]{
 \includegraphics[scale = .5]{../figures/report/ratemaps/CA1_bigSquare/ec016.577_590.ec016.582.pdf}
-\label{fig:sf4}
+\label{fig:rmsf4}
 }
-\label{fig:ratemaps}
-\caption[Rate maps]{Some examples of place cell rate maps, \subref{fig:sf1}, \subref{fig:sf2} are the rate maps from the CA3 in a square enclosure,\subref{fig:sf3}, \subref{fig:sf4} are the rate maps from the CA1 in a square enclosure}
+\caption[Rate maps]{Some examples of place cell rate maps, \subref{fig:rmsf1}, \subref{fig:rmsf2} are the rate maps from the CA3 in a square enclosure,\subref{fig:rmsf3}, \subref{fig:rmsf4} are the rate maps from the CA1 in a square enclosure}
+\label{fig:rm}
 \end{figure}
-
+Figure \ref{fig:rm} shows some example rate maps of place cells from the CA3 and CA1. 
 %%--------------------------------------------------
 %% rate remapping pk rate
 %%--------------------------------------------------
@@ -40,53 +40,47 @@ The primary objective was to explore and search for patterns in the single and p
 \centering
 \subfigure[]{
 \includegraphics[scale = 1]{../figures/report/RateRemapping_pkRateMat_CA3_bigSquare.pdf}
-\label{fig:sf1}
+\label{fig:pkrsf1}
 }
 \subfigure[]{
 \includegraphics[scale = 1]{../figures/report/RateRemapping_pkRateMat_CA1_bigSquare.pdf}
-\label{fig:sf2}
+\label{fig:pkrsf2}
 }
 
 \subfigure[]{
 \includegraphics[scale = 1]{../figures/report/RateRemapping_pkRateMat_CA3_linear.pdf}
-\label{fig:sf3}
+\label{fig:pkrsf3}
 }
 \subfigure[]{
 \includegraphics[scale = 1]{../figures/report/RateRemapping_pkRateMat_CA1_linear.pdf}
-\label{fig:sf4}
+\label{fig:pkrsf4}
 }
+\caption[Rate Remapping]{Scatter plots of firing rates of place cells pooled from CA1 and CA3  across the same environment. The abscissa represents the mean firing rates of place cells with single place fields in a recording session. The ordinate represents the mean firing rate of the same cell in another recording session in the same environment. \subref{fig:pkrsf1} CA3 place cells in \emph{Square} enclosure, \subref{fig:pkrsf2} CA1 place cells in \emph{Square} enclosure, \subref{fig:pkrsf3} CA3 place cells in \emph{Linear} enclosure, \subref{fig:pkrsf4} CA1 place cells in \emph{Linear} enclosure}
 \label{fig:rateremapping}
-\caption[Rate Remapping]{Scatter plots of firing rates of place cells pooled from CA1 and CA3  across the same environment. The abscissa represents the mean firing rates of place cells with single place fields in a recording session. The ordinate represents the mean firing rate of the same cell in another recording session in the same environment. \subref{fig:sf1} CA3 place cells in \emph{Square} enclosure, \subref{fig:sf2} CA1 place cells in \emph{Square} enclosure, \subref{fig:sf3} CA3 place cells in \emph{Linear} enclosure, \subref{fig:sf4} CA1 place cells in \emph{Linear} enclosure}
 \end{figure}
 
 
+
+
 %%--------------------------------------------------
-%% pk dist changes 
+%% pk dist changes diff env
 %%--------------------------------------------------
 
 \begin{figure}[htb!]
 \centering
 \subfigure[]{
-\includegraphics[scale = 1]{../figures/report/pkDistMat_CA3_bigSquare.pdf}
-\label{fig:sf1}
+\includegraphics[scale = 1]{../figures/report/pkDist_bS_Lin_CA3.pdf}
+\label{fig:pkdsf1}
 }
 \subfigure[]{
-\includegraphics[scale = 1]{../figures/report/pkDistMat_CA1_bigSquare.pdf}
-\label{fig:sf2}
+\includegraphics[scale = 1]{../figures/report/pkDist_bS_Lin_CA1.pdf}
+\label{fig:pkdsf2}
 }
-
-%\subfigure[]{
-%\includegraphics[scale = .4]{../figures/report/pkDistMat_CA3_linear.pdf}
-%\label{fig:sf3}
-%}
-%\subfigure[]{
-%\includegraphics[scale = .4]{../figures/report/pkDistMat_CA1_linear.pdf}
-%\label{fig:sf4}
-%}
+\caption[Place field Peak distances]{Scatter plots of the peak distance between the peaks of place cells which are active across several sessions and posses a single place field in environments with different topology. Data pooled from CA1 and CA3  from all Square-Linear session pairs.  \subref{fig:pkdsf1} CA3 place cells in  \subref{fig:pkdsf2} CA1 place cells }
 \label{fig:pkDist}
-\caption[Place field Peak distances]{Scatter plots of the peak distance between the peaks of place cells which are active across several sessions and posses a single place field in the same environment. Data pooled from CA1 and CA3  from all sessions in the same environment.  \subref{fig:sf1} CA3 place cells in \emph{Square} enclosure, \subref{fig:sf2} CA1 place cells in \emph{Square} enclosure} %, \subref{fig:sf3} CA3 place cells on \emph{Linear} track, \subref{fig:sf4} CA1 place cells on \emph{Linear} track}
 \end{figure}
-It was observed that the firing rate of place cells in is reliable across multiple sessions in the same environment. It would be expected that the cells with higher firing rates have comparable firing rates across multiple exposure of the animal to the same environment, if higher firing rates imply a stable representation. 
+It was observed that the firing rate of place cells in is reliable across multiple sessions in the same environment (Fig:  \ref{fig:rateremapping}) . It would be expected that the cells with higher firing rates have comparable firing rates across multiple exposure of the animal to the same environment, if higher firing rates imply a stable representation. \\
+The distance of the place field peaks is not preserved for cells pairs that are active in environments with different topologies (Fig: \ref{fig:pkDist} ).
 
 \section[Multiple Place fields]{Place cells have multiple spatial receptive fields}
 %%---------------------------------
@@ -96,17 +90,17 @@ It was observed that the firing rate of place cells in is reliable across multip
 \centering
 \subfigure[CA3]{
 \includegraphics[scale = 1]{../figures/report/NSubFields_CA3.pdf}
-\label{fig:sf1}
+\label{fig:sfsf1}
 }
 \subfigure[CA1]{
 \includegraphics[scale = 1]{../figures/report/NSubFields_CA1.pdf}
-\label{fig:sf2}
+\label{fig:sfsf2}
 }
+\caption[Multiple receptive fields of Place Cells]{The distribution of number of distinct place fields of a single cells. Only receptive fields with a peak rates above the 20 \% of the overall peak rate were chosen. The sub-fields with area less than the threshold were not considered as sub-fields. The threshold was computed relative to the area of the sub-field with the maximum firing rate \subref{fig:sfsf1} CA3 place cells in square enclosure \subref{fig:sfsf2} CA1 place cells in square enclosure}
 \label{fig:nsubfields}
-\caption[Multiple receptive fields of Place Cells]{The distribution of number of distinct place fields of a single cells. Only receptive fields with a peak rates above the 20 \% of the overall peak rate were chosen. The sub-fields with area less than the threshold were not considered as sub-fields. The threshold was computed relative to the area of the sub-field with the maximum firing rate \subref{fig:sf1} CA3 place cells in square enclosure \subref{fig:sf2} CA1 place cells in square enclosure}
 \end{figure}
 
-
+The pyramidal cells in this data set were sensitive to multiple spatial location resulting in numerous peaks in the average rate maps at corresponding locations. \\
 
 \section[Population activity within a fixed environment]{The place cell population has reliable representation of an environment}
 
@@ -116,8 +110,8 @@ It was observed that the firing rate of place cells in is reliable across multip
 \begin{figure}[htb!]
 \centering
 \includegraphics[scale = 1]{../figures/report/CA3.InstantPV.pdf}
-\label{fig:sf1}
-\caption{Dot product of population vector for each theta cycle and the stacked average rate map at the end of the trial.}
+\caption[Population Vector, fine time scale]{Dot product of population vector for each theta cycle and the stacked average rate map at the end of the trial.}
+\label{fig:tpv}
 \end{figure}
 
 %%---------------------------------------
@@ -127,102 +121,138 @@ It was observed that the firing rate of place cells in is reliable across multip
 \centering
 \subfigure{
 \includegraphics[scale = 1]{../figures/report/CA3.bigSquare.dp.chunks.pdf}
-\label{fig:sf2}
+\label{fig:pvcsf2}
 }
 \subfigure{
 \includegraphics[scale = 1]{../figures/report/CA1.bigSquare.dp.chunks.pdf}
-\label{fig:sf3}
+\label{fig:pvcsf3}
 }
 \subfigure{
 \includegraphics[scale = 1]{../figures/report/CA3.linear.dp.chunks.pdf}
-\label{fig:sf4}
+\label{fig:pvcsf4}
 }
 \subfigure{
 \includegraphics[scale = 1]{../figures/report/CA1.linear.dp.chunks.pdf}
-\label{fig:sf5}
+\label{fig:pvcsf5}
 }
-\caption[Population Vector time course]{Examples of dot product of average rate maps within different segments and the average rate map. The black squares show the mean across all the rats and recording sessions, the gray circles are the values for individual sessions, dot products for recording in square enclosure in \subref{fig:sf2} CA3, \subref{fig:sf3} CA1. Dot products for recording in Linear track in \subref{fig:sf4} CA3, \subref{fig:sf5} CA1}
+\caption[Population Vector time course]{Examples of dot product of average rate maps within different segments and the average rate map. The black squares show the mean across all the rats and recording sessions, the gray circles are the values for individual sessions, dot products for recording in square enclosure in \subref{fig:pvcsf2} CA3, \subref{fig:pvcsf3} CA1. Dot products for recording in Linear track in \subref{fig:pvcsf4} CA3, \subref{fig:pvcsf5} CA1}
+\label{fig:pvchunks}
 \end{figure}
 
 %%----------------------------------
 %% pv chunk pool
 %%----------------------------------
-
 \begin{figure}[htb!]
 \centering
 \subfigure{
-\includegraphics[scale = .5]{../figures/report/PoolPVs_CA3_bigSquare.pdf}
-\label{fig:sf2}
+\includegraphics[scale = 1]{../figures/report/PoolPVs_CA3_bigSquare.pdf}
+\label{fig:pvcpsf1}
 }
 \subfigure{
-\includegraphics[scale = .5]{../figures/report/PoolPVs_CA1_bigSquare.pdf}
-\label{fig:sf3}
+\includegraphics[scale = 1]{../figures/report/PoolPVs_CA1_bigSquare.pdf}
+\label{fig:pvcpsf2}
 }
 \subfigure{
-\includegraphics[scale = .5]{../figures/report/PoolPVs_CA3_linear.pdf}
-\label{fig:sf3}
+\includegraphics[scale = 1]{../figures/report/PoolPVs_CA3_linear.pdf}
+\label{fig:pvcpsf3}
 }
 \subfigure{
-\includegraphics[scale = .5]{../figures/report/PoolPVs_CA1_linear.pdf}
-\label{fig:sf3}
+\includegraphics[scale = 1]{../figures/report/PoolPVs_CA1_linear.pdf}
+\label{fig:pvcpsf4}
 }
-\caption[CA3 Population Vector analysis]{The whole recording session was split into three segments and the average population vectors compared. Scatter plots of dot products in Square enclosure in \subref{fig:sf1} CA3 population, \subref{fig:sf2} CA1 population and linear track \subref{fig:sf3} CA3 \subref{fig:sf4} CA1}
+\caption[CA3 Population Vector analysis]{The whole recording session was split into three segments and the average population vectors compared. Scatter plots of dot products in Square enclosure in \subref{fig:pvcpsf1} CA3 population, \subref{fig:pvcpsf2} CA1 population and linear track \subref{fig:pvcpsf3} CA3 \subref{fig:pvcpsf4} CA1}
+\label{fig:poolpvchunk}
 \end{figure}
 
-When an animal is introduced to a familiar environment the network has to identify the reference frame from the sensory cues available and the previously learnt associations. The population population activity would be very informative of how this is achieved. 
+.\\[2cm]
+When an animal is introduced to a familiar environment the network has to identify the reference frame from the sensory cues available and the previously learnt associations. The population population activity would be very informative of how this is achieved. The computed population vectors were sparse, chiefly because only a small subset of place cells fired in every spatial bin. So the dot product with the average stacked rate maps highly discontinuous (Fig: \ref{fig:tpv}). The network activity level was found to be  stable throughout the recording session (Fig: \ref{fig:pvchunks} , \ref{fig:poolpvchunk}).
+
+
+
+
+
 %%----------------------------------------------
 %% Cofiring likelihood
 %%---------------------------------------------
 \section{Cofiring likelihood}
-\begin{figure}[H]
+\begin{figure}[htb!]
 \centering
 \subfigure{
-\includegraphics[scale = .5]{../figures/report/CofiringVsDist_CA3_bigSquare.pdf}
-\label{fig:sf2}
+\includegraphics[scale = .5]{../figures/report/CofiringVsDist1_CA3_bigSquare.pdf}
+\label{fig:cfsf2}
 }
 \subfigure{
-\includegraphics[scale = .5]{../figures/report/CofiringVsDist_CA3_bigSquare.pdf}
-\label{fig:sf3}
+\includegraphics[scale = .5]{../figures/report/CofiringVsDist1_CA3_bigSquare.pdf}
+\label{fig:cfsf3}
 }
+\caption[Pairwise cofiring]{The }
+\label{fig:cfvsdist}
 \end{figure}
+
+\begin{figure}[hb!]
+\centering
+
+\end{figure}
+
+Cells that have proximal place fields will usually would be tend to fire within a small time duration of each other. The cofiring likelikhood decreased as expected with increasing distance between the place field peaks (Fig: \ref{fig:cfvsdist}). The ratio cofiring likelihoods for cells pairs in pre-trial and post-trial sleep would indicate the bias that results due to synaptic changes during awake exploration in the trial.\\
 
 \section{ Cell sequences}
 \begin{figure}[H]
 \centering
 \subfigure[]{
 \includegraphics[scale = .5]{../figures/report/Post.CA3.kenji.gt5Cells.pdf}
-\label{fig:sf1}
+\label{fig:tmsf1}
 }
 \subfigure[     ]{
 \includegraphics[scale = .5]{../figures/report/Pre.CA3.kenji.gt5Cells.pdf}
-\label{fig:sf2}
+\label{fig:tmsf2}
 }
 \subfigure[]{
-\includegraphics[scale = .5]{../figures/report/Post.CA3.kenji.gt5Cells.pdf} % >>>>>>>> TEST <<<<<<<<<<<
-\label{fig:sf3}
+\includegraphics[scale = .5]{../figures/report/Post.CA3a.kenji.gt5Cells.pdf} % >>>>>>>> TEST <<<<<<<<<<<
+\label{fig:tmsf3}
 }
 \subfigure[]{
 \includegraphics[scale = .5]{../figures/report/Pre.CA1.kenji.gt5Cells.pdf}
-\label{fig:sf4}
+\label{fig:tmsf4}
 }
-\caption[Template matching analysis]{The distribution of correlation values of the the cell sequence order during detected population events and the template. The correlation values are for sequences which had a at least 6 distinct cells active in the detection window. \subref{fig:sf1} Post-trial sleep events in CA3,  \subref{fig:sf2} Pre-trial sleep event in tCA3, \subref{fig:sf3} Post-trial events in CA1,  \subref{fig:sf4} Pre-trial events in CA1. Inset in each figure shows the count of sequence lengths of all the detected events.}
+\caption[Template matching analysis]{The distribution of correlation values of the the cell sequence order during detected population events and the template. The correlation values are for sequences which had a at least 6 distinct cells active in the detection window. The \emph{open} bars are the counts of the of the correlation values from the data, the \emph{red} bars refer to the distribution of significant event correlations and the \emph{cyan} bars is the sampling distribution obtained through shuffling cell identities in the template. \subref{fig:tmsf1} Post-trial sleep events in CA3,  \subref{fig:tmsf2} Pre-trial sleep event in CA3, \subref{fig:tmsf3} Post-trial events in CA1,  \subref{fig:tmsf4} Pre-trial events in CA1. Inset in each figure shows the count of sequence lengths of all the detected events.}
 \label{tmcorr}
 \end{figure}
+
 %%-----------------------------------------------
-%% pre-2-post
+%% pre-2-post CA3
 %%-----------------------------------------------
 \begin{figure}[H!]
 \centering
 \subfigure[]{
 \includegraphics[scale = 1]{../figures/report/pre2post_CA3.pdf}
-\label{fig:sf1}
+\label{fig:p2psf1}
 }
 \subfigure[]{
-%\includegraphics[scale = 1]{../figures/report/pre2post_CA3.pdf}
-\label{fig:sf2}
+\includegraphics[scale = 1]{../figures/report/pre2post_pool_CA3.pdf}
+\label{fig:p2psf2}
 }
-\label{pre2post}
-\caption{The number of significant cell sequences in pre and post trial sleep, \subref{fig:sf1} CA3, \subref{fig:sf2} CA1}
+\caption[Pre and post trial sleep events CA3]{The fraction of significant cell sequences in pre and post trial sleep in CA3, \subref{fig:p2psf1} Individual trials, \subref{fig:p2psf2} Fraction for all trials .}
+\label{pre2postca3}
 \end{figure}
+The template matching analysis detected detected 4.45 \% (68 out of 1527 pre-trial sleep population events) as significantly correlated (at $ \alpha $ = $0.025$) with awake sequences and 2.24 \% (30 out of 1337 post-trial sleep events) in the CA3 place cell population (Fig: \ref{tmcorr} ). The number of significantly correlated events are expected to increase in the sleep after exploration on the linear track. But in this data set there was no significant increase in replay events in the CA3 population (Fig: \ref{pre2post}) (\emph{Sign Test, p = 0.625}). ... (Fig: \ref )
+
+%%-----------------------------------------------
+%% pre-2-post CA1
+%%-----------------------------------------------
+\begin{figure}[H!]
+\centering
+\subfigure[]{
+\includegraphics[scale = 1]{../figures/report/pre2post_CA1.pdf}
+\label{fig:p2pca1sf1}
+}
+\subfigure[]{
+\includegraphics[scale = 1]{../figures/report/pre2post_pool_CA1.pdf}
+\label{fig:p2pca1sf2}
+}
+\caption[Pre and post trial sleep events CA1]{The fraction of significant cell sequences in pre and post trial sleep in CA1, \subref{fig:p2pca1f1} Individual trials, \subref{fig:p2pca1f2} Fraction for all trials .}
+\label{pre2postca1}
+\end{figure}
+The template matching analysis detected detected ... \% (. out of ... pre-trial sleep population events) as significantly correlated (at $ \alpha $ = $0.025$) with awake sequences and .. \% (... out of .. post-trial sleep events) in the CA1 place cell population (Fig: \ref{tmcorr} ). The number of significantly correlated events are expected to increase in the sleep after exploration on the linear track. But in this data set there was no significant increase in replay events (Fig: \ref{pre2postca3}) (\emph{Sign Test, p = ...}).
 %\section[Sparse encoding]{The neural representation of spatial information is sparse (stats?)}
 %(\# of common cells)
