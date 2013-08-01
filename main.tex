@@ -18,6 +18,20 @@
 \usepackage[section, verbose]{placeins} % force figures to be placed in sections
 %\usepackage{hyperref}
 \usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+%%-----
+%wider text width
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item[]}{\end{list}}
+%%----
+
 \hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
 \title{\ttitle} % Defines the thesis title - don't touch this
 
@@ -117,11 +131,16 @@
 \pagestyle{empty} % No headers or footers for the following pages
 
 \null\vfill % Add some space to move the quote down the page a bit
-
-\textit{ "<text>"}
+{\small
+\emph{  ... Where words come out from the depth of truth;\\
+Where tireless striving stretches its arms towards perfection; \\
+Where the clear stream of reason has not lost its way into the dreary desert sand of dead habit;\\
+Where the mind is led forward by thee into ever-widening thought and action;\\
+Into that heaven of freedom, my father, let my country awake.
+}}
 
 \begin{flushright}
-<author>
+Rabindranath Tagore  
 \end{flushright}
 
 \vfill\vfill\vfill\vfill\vfill\vfill\null % Add some space at the bottom to position the quote just right
@@ -261,8 +280,8 @@ Hippocampus is a structure that has been implicated to play an important role in
 
 \acknowledgements{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
 
-%I would like to thank Dr. Anton Sirota for providing me an excellent opportunity to work in this exciting field. I am extremely great full for his guidance, support and advice. I would like to thank Dr. Caroline Geisler and Anton for their time during our discussions. \\
-%I would also like to thank Dr. Evgeny Resnik, Gerrit Schwesig and Justin Graboski for their valuable help and suggestions.  
+I would like to thank Dr. Anton Sirota for providing me an excellent opportunity to work in this exciting field. I am extremely great full for his guidance, support and advice. I would like to thank Dr. Caroline Geisler and Anton for their time during our discussions. \\
+I would also like to thank Dr. Evgeny Resnik, Gerrit Schwesig and Justin Graboski for their valuable help and suggestions.  
 
 }
 %----------------------------------------------------------------------------------------
