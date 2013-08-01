@@ -2,7 +2,8 @@
 \label{results}
 \lhead{Chapter 3. \emph{Results}} 
 
-The primary objective was to explore and search for patterns in the single and population place cell activity which help in understanding the mechanisms of sequential place cell activity during different behavioural states. Initially the single place cell properties across similar and different environments was characterized. Subsequently, pairwise properties were studied followed by population activity. \\
+The CA3 and CA1 place populations were analyzed at single cell and population levels to unravel the mechanisms of spatial processing in these networks. Initially the single place cell properties across similar and different environments were characterized. Subsequently, pairwise properties were studied followed by population activity and sequential place cell activity during different behavioural states. \\ 
+
 
 \section[Place cell firing in same environment]{The place cells maintain their firing rates across \\ multiple sessions in the same environment}
 
@@ -62,48 +63,17 @@ Figure \ref{fig:rm} shows some example rate maps of place cells from the CA3 and
 
 
 
-%%--------------------------------------------------
-%% pk dist changes diff env
-%%--------------------------------------------------
 
-\begin{figure}[htb!]
-\centering
-\subfigure[]{
-\includegraphics[scale = 1]{../figures/report/pkDist_bS_Lin_CA3.pdf}
-\label{fig:pkdsf1}
-}
-\subfigure[]{
-\includegraphics[scale = 1]{../figures/report/pkDist_bS_Lin_CA1.pdf}
-\label{fig:pkdsf2}
-}
-\caption[Place field Peak distances]{Scatter plots of the peak distance between the peaks of place cells which are active across several sessions and posses a single place field in environments with different topology. Data pooled from CA1 and CA3  from all Square-Linear session pairs.  \subref{fig:pkdsf1} CA3 place cells in  \subref{fig:pkdsf2} CA1 place cells }
-\label{fig:pkDist}
-\end{figure}
-It was observed that the firing rate of place cells in is reliable across multiple sessions in the same environment (Fig:  \ref{fig:rateremapping}) . It would be expected that the cells with higher firing rates have comparable firing rates across multiple exposure of the animal to the same environment, if higher firing rates imply a stable representation. \\
-The distance of the place field peaks is not preserved for cells pairs that are active in environments with different topologies (Fig: \ref{fig:pkDist} ).
+It was observed that the firing rate of place cells, is reliable across multiple sessions in the same environment (Fig:  \ref{fig:rateremapping}) . It would be expected that the cells with higher firing rates have comparable firing rates across multiple exposure of the animal to the same environment, if higher firing rates imply a stable representation. \\
+%When cells that were active across different environment were examined, the firing rates...........
+%The distance of the place field peaks was not preserved for cells pairs that are active in environments with different topologies (Fig: \ref{fig:pkDist} ).
 
-\section[Multiple Place fields]{Place cells have multiple spatial receptive fields}
-%%---------------------------------
-%% subfields
-%%---------------------------------
-\begin{figure}[htb!]
-\centering
-\subfigure[CA3]{
-\includegraphics[scale = 1]{../figures/report/NSubFields_CA3.pdf}
-\label{fig:sfsf1}
-}
-\subfigure[CA1]{
-\includegraphics[scale = 1]{../figures/report/NSubFields_CA1.pdf}
-\label{fig:sfsf2}
-}
-\caption[Multiple receptive fields of Place Cells]{The distribution of number of distinct place fields of a single cells. Only receptive fields with a peak rates above the 20 \% of the overall peak rate were chosen. The sub-fields with area less than the threshold were not considered as sub-fields. The threshold was computed relative to the area of the sub-field with the maximum firing rate \subref{fig:sfsf1} CA3 place cells in square enclosure \subref{fig:sfsf2} CA1 place cells in square enclosure}
-\label{fig:nsubfields}
-\end{figure}
 
-The pyramidal cells in this data set were sensitive to multiple spatial location resulting in numerous peaks in the average rate maps at corresponding locations. \\
 
 \section[Population activity within a fixed environment]{The place cell population has reliable representation of an environment}
 
+When an animal is introduced to a familiar environment the network has to identify the reference frame from the sensory cues available and the previously learnt associations. The population population activity would be very informative of how this is achieved. It is expected that the population activity would reflect the attractor dynamics in the network i.e as the network converges to one of its attractors, the dot product of the population vector would initially increase and then settle to a stable value asymptotically. The computed population vectors were sparse, chiefly because only a small subset of place cells fired in every spatial bin. So the dot product with the average stacked rate maps was highly discontinuous (Fig: \ref{fig:tpv}).
+When each session was split into segments of three equal intervals and population activity compared, the network activity level was comparable between segments; it was found that the network activity on the whole remains at a level that is maintained throughout the periods of exploration,(Fig: \ref{fig:pvchunks} , \ref{fig:poolpvchunk}). Single cells with smaller firing rates show higher variance in their firing rates. The place cells with higher firing rates are expected to have lower variance in their firing rates, provided that the magnitude of firing rate is an indicator of a stronger association to a salient location. Although not a lot of place cells with higher firing rates were available to test this idea.\\
 %%--------------
 %% pv bS 
 %%--------------
@@ -144,19 +114,19 @@ The pyramidal cells in this data set were sensitive to multiple spatial location
 %%----------------------------------
 \begin{figure}[htb!]
 \centering
-\subfigure{
+\subfigure[]{
 \includegraphics[scale = 1]{../figures/report/PoolPVs_CA3_bigSquare.pdf}
 \label{fig:pvcpsf1}
 }
-\subfigure{
+\subfigure[]{
 \includegraphics[scale = 1]{../figures/report/PoolPVs_CA1_bigSquare.pdf}
 \label{fig:pvcpsf2}
 }
-\subfigure{
+\subfigure[]{
 \includegraphics[scale = 1]{../figures/report/PoolPVs_CA3_linear.pdf}
 \label{fig:pvcpsf3}
 }
-\subfigure{
+\subfigure[]{
 \includegraphics[scale = 1]{../figures/report/PoolPVs_CA1_linear.pdf}
 \label{fig:pvcpsf4}
 }
@@ -164,17 +134,61 @@ The pyramidal cells in this data set were sensitive to multiple spatial location
 \label{fig:poolpvchunk}
 \end{figure}
 
-.\\[2cm]
-When an animal is introduced to a familiar environment the network has to identify the reference frame from the sensory cues available and the previously learnt associations. The population population activity would be very informative of how this is achieved. The computed population vectors were sparse, chiefly because only a small subset of place cells fired in every spatial bin. So the dot product with the average stacked rate maps highly discontinuous (Fig: \ref{fig:tpv}). The network activity level was found to be  stable throughout the recording session (Fig: \ref{fig:pvchunks} , \ref{fig:poolpvchunk}).
+
+\section[Multiple Place fields]{Place cells have multiple spatial receptive fields}
+
+The place cells in this data set were sensitive to multiple spatial location resulting in numerous peaks in the average rate maps at corresponding locations (Fig: \ref{fig:nsubfields}), which is not a characteristic of classical place cells. \\
+%%---------------------------------
+%% subfields
+%%---------------------------------
+\begin{figure}[htb!]
+\centering
+\subfigure[]{
+\includegraphics[scale = 1]{../figures/report/NSubFields_CA3.pdf}
+\label{fig:sfsf1}
+}
+\subfigure[]{
+\includegraphics[scale = 1]{../figures/report/NSubFields_CA1.pdf}
+\label{fig:sfsf2}
+}
+\caption[Multiple receptive fields of Place Cells]{The distribution of number of distinct place fields of a single cells. Only receptive fields with a peak rates above the 20 \% of the overall peak rate were chosen. The sub-fields with area less than the threshold were not considered as sub-fields. The threshold was computed relative to the area of the sub-field with the maximum firing rate \subref{fig:sfsf1} CA3 place cells in square enclosure \subref{fig:sfsf2} CA1 place cells in square enclosure}
+\label{fig:nsubfields}
+\end{figure}
+
+\section{Pairwise analysis}
+The pairwise analysis was performed with the intention of quantifying invariant features of pairs of place cells expressed either in their firing activity or their spatial receptive fields.\\ To discover how the spatial outlay of the spatial receptive fields of place cells is reflected in their pairwise cofiring characteristics, the offset in the CCGs was compared to the distance between the place field peaks. In the dataset used for this study it turned out to be difficult to asses due to the multiple sub-fields of the place cells. It was found that the CCGs had peaks at several time lags, which could be interpreted as the consequence of multiple sub-fields. However, an attempt to overcome this issue was made by dealing with the sub-fields separately.  The CCGs for pairs of overlapping sub-fields were computed by selecting the spikes that were fired only inside the sub-fields to check if the offsets from the different sub-fields can be extracted. But, this had the drawback that only a small subset of spikes were available for computing the CCGs. \\
+
+The relative firing characteristics of pairs of place cells with overlapping place fields in atleast one of  two or more distinct environments were computed. For every pair of cell with overlapping place fields, it was tested whether the the time offset in the spike time correlations is preserved across environments. From the available data, there no such invariant relationship was found.  \\
+The examination of cells that were active in environments with different topologies showed that, the distance of between the place field peaks was not preserved. (Fig: \ref{fig:pkDist}).
 
 
+%%--------------------------------------------------
+%% pk dist changes diff env
+%%--------------------------------------------------
 
+\begin{figure}[htb!]
+\centering
+\subfigure[]{
+\includegraphics[scale = 1]{../figures/report/pkDist_bS_Lin_CA3.pdf}
+\label{fig:pkdsf1}
+}
+\subfigure[]{
+\includegraphics[scale = 1]{../figures/report/pkDist_bS_Lin_CA1.pdf}
+\label{fig:pkdsf2}
+}
+\caption[Place field Peak distances]{Scatter plots of the peak distance between the peaks of place cells which are active across several sessions and posses a single place field in environments with different topology. Data pooled from CA1 and CA3  from all Square-Linear session pairs.  \subref{fig:pkdsf1} CA3 place cells in  \subref{fig:pkdsf2} CA1 place cells }
+\label{fig:pkDist}
+\end{figure}
 
+\section{Population activity during sleep}
+
+SWS is interspersed by epochs of highly synchronous activity, which comprises a large subset of the CA3 and CA1 principle cell populations firing in short time intervals. A Bayesian decoding approach was initially adopted to investigate how this might effect the network activity in succeeding periods of exploration and how it might depend on previous exploration. This approach enables one to ask, given an optimal decoder of population activity (optimal in the sense of mean squared error defined by Fisher information, under assumptions of Poisson spike statistics  and independence), what do these population events represent. The Bayesian decoding of the animals position from the place field spikes had very low accuracy in the 2D arena. This is due to the low number of place cells that were available, it has been shown that the mean decoding error is inversely proportional to the square root of the number cell (this is valid for sufficiently large number of cells) \cite{Zhang2013}. For the same reason the analysis of population events in the 2D environment did not yield any significant results. The decoding position showed a lot of discontinuous jumps. For the linear track data, template matching approach was adopted to characterize the population events. 
 
 %%----------------------------------------------
 %% Cofiring likelihood
 %%---------------------------------------------
-\section{Cofiring likelihood}
+\subsection{Cofiring likelihood}
+Since the Bayesian decoding required more cells, a simpler measure of pairwise co-firing likelihood was computed and compared before and after exploration. Although this measure provides a method to characterize pairs of cells, it is not adequate for assessing sequential activation of more cells. It is expected that the the cells with closer place fields have higher cofiring likelihood which would drop for larger distances, this was indeed the case. (Fig: \ref{fig:cfvsdist}). The ratio cofiring likelihoods for cells pairs in pre-trial and post-trial sleep would indicate the bias that results due to synaptic changes during awake exploration in the trial.
 \begin{figure}[htb!]
 \centering
 \subfigure{
@@ -194,9 +208,10 @@ When an animal is introduced to a familiar environment the network has to identi
 
 \end{figure}
 
-Cells that have proximal place fields will usually would be tend to fire within a small time duration of each other. The cofiring likelikhood decreased as expected with increasing distance between the place field peaks (Fig: \ref{fig:cfvsdist}). The ratio cofiring likelihoods for cells pairs in pre-trial and post-trial sleep would indicate the bias that results due to synaptic changes during awake exploration in the trial.\\
 
-\section{ Cell sequences}
+
+\subsection{Cell sequences in linear track}
+
 \begin{figure}[H]
 \centering
 \subfigure[]{
@@ -235,13 +250,17 @@ Cells that have proximal place fields will usually would be tend to fire within 
 \caption[Pre and post trial sleep events CA3]{The fraction of significant cell sequences in pre and post trial sleep in CA3 place cell population, \subref{fig:p2psf1} Individual trials, \subref{fig:p2psf2} Fraction for all trials, the was no difference found between the number of re/pre-activations ((\emph{Sign Test, p = 0.625})).}
 \label{fig:pre2postca3}
 \end{figure}
-The template matching analysis detected detected 4.45 \% (68 out of 1527 pre-trial sleep population events) as significantly correlated (at $ \alpha $ = $0.025$) with awake sequences and 2.24 \% (30 out of 1337 post-trial sleep events) in the CA3 place cell population (Fig: \subref{tmcorr} ). The number of significantly correlated events are expected to increase in the sleep after exploration on the linear track. But in this data set there was no significant increase in replay events in the CA3 population (Fig: \ref{fig:pre2postca3} \subref{fig:p2psf2}) (\emph{Sign Test, p = 0.625})
+The template matching analysis detected detected 4.45 \% (68 out of 1527 pre-trial sleep population events) as significantly correlated (at $ \alpha $ = $0.025$) with awake sequences and 2.24 \% (30 out of 1337 post-trial sleep events) in the CA3 place cell population (Fig: \subref{tmcorr} ). It is expected the sequences that occur in the sleep succeeding exploratory behaviour are enhanced. But in this data set there was no significant increase in replay events in the CA3 population (Fig: \ref{fig:pre2postca3} \subref{fig:p2psf2}) (\emph{Sign Test, p = 0.625})
 
 %%-----------------------------------------------
 %% pre-2-post CA1
 %%-----------------------------------------------
 \begin{figure}[H!]
 \centering
+\subfigure[]{
+\includegraphics[scale = 1]{../figures/report/pre2post_pool_CA1_scatter.pdf}
+\label{fig:p2pca1sf3}
+}
 \subfigure[]{
 \includegraphics[scale = 1]{../figures/report/pre2post_CA1.pdf}
 \label{fig:p2pca1sf1}
@@ -253,6 +272,6 @@ The template matching analysis detected detected 4.45 \% (68 out of 1527 pre-tri
 \caption[Pre and post trial sleep events CA1]{The fraction of significant cell sequences in pre and post trial sleep in CA1 place cell population, \subref{fig:p2pca1sf1} Fractions of significant events in individual trials, \subref{fig:p2pca1sf2} Fraction for all trials combined. The difference was found to be significant (\emph{Sign Test, p = 1.13} x $\emph{10}^{-4}$)}
 \label{fig:pre2postca1}
 \end{figure}
-The template matching analysis detected detected ... \% (. out of ... pre-trial sleep population events) as significantly correlated (at $ \alpha $ = $0.025$) with awake sequences and .. \% (... out of .. post-trial sleep events) in the CA1 place cell population (Fig: \ref{tmcorr} ). The number of significantly correlated events are expected to increase in the sleep after exploration on the linear track. But in this data set there was no significant increase in replay events (Fig: \subref{pre2postca1}) (\emph{Sign Test, p =  1.13} x $\emph{10}^{-4}$)).
+The template matching analysis detected detected 4.34 \% (1047 out of 32396 pre-trial sleep population events) as significantly correlated (at $ \alpha $ = $0.025$) with awake sequences and 2.22 \% (298 out of 13407 post-trial sleep events) in the CA1 place cell population (Fig: \ref{tmcorr} ). The number of significantly correlated events are expected to increase in the sleep after exploration on the linear track. On the contrary, in this data set there was a significant decrease in replay events in CA1 population (Fig: \ref{fig:pre2postca1} \subref{fig:p2pca1sf2}) (\emph{Sign Test, p =  1.13} x $\emph{10}^{-4}$)).
 %\section[Sparse encoding]{The neural representation of spatial information is sparse (stats?)}
 %(\# of common cells)
