@@ -36,20 +36,21 @@ Population vectors were constructed for every theta cycle. The theta phase with 
 %\cite{Gothard1996} - pv spatial corr 
 
 \section{Trajectory event analysis}
-Bayesian decoding approach was adapted to analyze candidate population events in the 2D environment. For the linear track, template matching method was employed. 
+Bayesian decoding approach was adapted to analyze candidate population events in the 2D environment. For the linear track, template matching method was employed \cite{Dragoi2013a}. 
 \subsection{Linear track}
 The spiking activity during sleep was identified as an event epoch if there were no less than 6 pyramidal cells firing within a time window. Further, it was required that this window was flanked by windows of 100ms with no more than 1 spike. The linearised rate maps were sorted by position of their peak firing rates to obtain a template of cell sequence for the two possible directions on the linear track. The firing sequence in each of the selected event epochs was defined by considering only the first spike fired by each cell and all other spikes fired by the same cell with the window were ignored. The sequences during pre and post trial sleep were then compared with the template. The rank correlation between each of these sequences and the template was computed. \\ 
 The significance of the detected sequences was determined by scrambling the cell identities in the template to generate new templates. This procedure yielded the sampling distribution of the observed correlation value for each event, when the resampled templates were correlated with the event sequence cell order.\\
 
 \subsection{Bayesian decoding for 2D place fields}
 To analyse the population events that occurred before and after the animal explored in a 2D arena, a Bayesian decoding approach was employed \cite{Zhang2013}. The average rate maps and the time binned spike counts were used to decode the positions that were represented by the sequences that occurred during the populations events. \\
-Given the spike counts $\mathbf{n}$, the posterior distribution of the position is given by : 
-%\begin{equation}
-%P(\mathbf{n} | \mathbf{x}) = \prod_{i = 1}^{N} P(n_{i} | \mathbf{x}) = \prod_{i = 1}^{N} \frac{(\tau f_{i}(\mathbf{x}))^{n_{i}}}{n_{i} !} e^{-\tau f_{i}		% (\mathbf{x})}P(\mathbf{n} | \mathbf{x}) = \prod_{i = 1}^{N} P(n_{i} | \mathbf{x}) = \prod_{i = 1}^{N} \frac{(\tau f_{i}(\mathbf{x}))^{n_{i}}}{n_{i} !} \emph{e}^{-\tau f_{i}(\mathbf{x})}
-%\end{equation}
+Given the spike counts $\mathbf{n}$ in a time window of length $\tau$, the posterior distribution of the position is given by : 
+
 \[ 
 P( \mathbf{x} | \mathbf{n}) = C(\tau, \mathbf{n}) P(\mathbf{x}) \left(\prod_{i = 1}^{N} f_{i}(\mathbf{x})^{n_i} \right) \emph{e}^{-\tau \sum\limits_{i = 1}^{N} f_{i}(\mathbf{x}) }
  \]
 
+where, \\
+$\mathbf{x}$ is the coordinates of the animals position.\\
+$f(\mathbf{x})$ is the spatial tuning curve.\\
 The script for Bayesian decoding was provided by Fabian Kloosterman.
 	
