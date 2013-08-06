@@ -53,3 +53,20 @@
 \caption[]{Bayesian decoding of position. \subref{fig:bdsf1} The rate maps of cells, whose instantaneous spike counts were used for decoding position of the animal. \subref{fig:bdsf2} The mean firing rate map of all the cells shown in \subref{fig:bdsf1}. \subref{fig:bdsf3} The Euclidean distance between the actual position of the animal and the peak of the posterior distribution.}
 \label{fig:decodePos}
 \end{figure}
+
+%%-------------------------------
+%% cluster quality
+%%------------------------------
+\begin{figure}
+\centering
+\subfigure[]{
+\includegraphics[scale=1]{../figures/report/CluQuality.pdf}
+\label{fig:edistVsspr}
+}
+\subfigure[]{
+\includegraphics[scale=.5]{../figures/report/eDistSprRM_gt20_th_45.pdf}
+\label{fig:rm}
+}
+\caption[]{Cluster isolation assessment. \subref{fig:edistVsspr} The scatter plot of isolation distance and sparsity of the place field. Each dot is a cluster. \subref{fig:rm} The rate maps sorted in increasing order of isolation distance. Only clusters that had an isolation distance grater than 20 and sparsity less than 0.45 are shown.}
+\label{fig:cluq}
+\end{figure}
