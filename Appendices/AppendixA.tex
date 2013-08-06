@@ -2,8 +2,54 @@
 
 \chapter{Supplementary figures} % Main appendix title
 
-\label{AppendixA} % For referencing this appendix elsewhere, use \ref{AppendixA}
+\label{supl} % For referencing this appendix elsewhere, use \ref{AppendixA}
 
-\lhead{Appendix A. \emph{Appendix Title Here}} % This is for the header on each page - perhaps a shortened title
+\lhead{Appendix A. \emph{Supplementary figures}} % This is for the header on each page - perhaps a shortened title
 
-Write your Appendix content here.
+%%----------------------------------
+%% CCGs
+%%----------------------------------
+
+\begin{figure}
+\centering
+\subfigure[]{
+\includegraphics[scale=1]{../figures/report/supl/ccg/ccgJustin_31_59.pdf}
+}
+\subfigure[]{
+\includegraphics[scale=1]{../figures/report/supl/ccg/ccgJustin_74_94.pdf}
+}
+\end{figure}
+
+\begin{figure}
+\ContinuedFloat % force subfigs to span multiple pages
+\centering
+\subfigure[]{
+\includegraphics[scale=1]{../figures/report/supl/ccg/ccgJustin_59_103.pdf}
+}
+\subfigure[]{
+\includegraphics[scale=1]{../figures/report/supl/ccg/ccgJustin_59_103.pdf}
+}
+\caption[]{Examples of cross and auto correlograms of cells with overlapping place fields in a circular open field. The rate maps are shown on the right.}
+\label{fig:ccgs}
+\end{figure}
+
+%%-----------------------------------
+%% Decoding
+%%-----------------------------------
+\begin{figure}
+\centering
+\subfigure[]{
+\includegraphics[scale=1]{../figures/report/supl/CA3_cof_jg05-20120315.crt1.pdf}
+\label{fig:bdsf1}
+}
+\subfigure[]{
+\includegraphics[scale=1]{../figures/report/supl/avgRm.pdf}
+\label{fig:bdsf2}
+}
+\subfigure[]{
+\includegraphics[scale=1]{../figures/report/supl/err_decodePos.pdf}
+\label{fig:bdsf3}
+}
+\caption[]{Bayesian decoding of position. \subref{fig:bdsf1} The rate maps of cells, whose instantaneous spike counts were used for decoding position of the animal. \subref{fig:bdsf2} The mean firing rate map of all the cells shown in \subref{fig:bdsf1}. \subref{fig:bdsf3} The Euclidean distance between the actual position of the animal and the peak of the posterior distribution.}
+\label{fig:decodePos}
+\end{figure}
