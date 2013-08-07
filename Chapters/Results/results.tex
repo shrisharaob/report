@@ -73,7 +73,7 @@ It was observed that the firing rate of place cells, is reliable across multiple
 
 \section[Population activity within a fixed environment]{The place cell population has reliable representation of an environment}
 
-When an animal is introduced to a familiar environment the network has to identify the reference frame from the sensory cues available and the previously learnt associations. The time course of the population activity would be very informative of how this is achieved. It is expected that the population activity would reflect the attractor dynamics in the network i.e as the network converges to one of its attractors, the dot product of the population vector would initially increase and then settle to a stable value asymptotically. The computed population vectors were sparse, chiefly because only a small subset of place cells fired in every spatial bin. So the dot product with the average stacked rate maps was highly discontinuous (Fig: \ref{fig:tpv}). Thus if there is increase, we don't have sufficient resolution to capture it. 
+When an animal is introduced to a familiar environment, the network has to identify the reference frame from the sensory cues available and the previously learnt associations. The time course of the population activity would be very informative of how this is achieved. It is expected that the population activity would reflect the attractor dynamics in the network i.e as the network converges to one of its attractors, the dot product of the population vector would initially increase and then settle to a stable value asymptotically. The computed population vectors were sparse, chiefly because only a small subset of place cells fired in every spatial bin. So the dot product with the average stacked rate maps was highly discontinuous (Fig: \ref{fig:tpv}). Thus if there is increase, there is insufficient resolution to capture it. 
 When each session was split into segments of three equal intervals and population activity compared, the network activity level was comparable between segments; it was found that the network activity on the whole remains at a level that is maintained throughout the periods of exploration (Fig: \ref{fig:pvchunks} , \ref{fig:poolpvchunk}). Single cells with smaller firing rates show higher variance in their firing rates. The place cells with higher firing rates are expected to have lower variance in their firing rates, provided that the magnitude of firing rate is an indicator of a stronger association to a salient location. Although not a lot of place cells with higher firing rates were available to test this idea.\\
 %%--------------
 %% pv bS 
@@ -157,9 +157,9 @@ The place cells in this data set were sensitive to multiple spatial location res
 \end{figure}
 
 \section{Pairwise analysis}
-The pairwise analysis was performed with the intention of quantifying invariant features of pairs of place cells expressed either in their firing activity or their spatial receptive fields.\\ To discover how the spatial outlay of the spatial receptive fields of place cells is reflected in their pairwise co-firing characteristics, the offset in the CCGs was compared to the distance between the place field peaks (known as sequence compression) \cite{Dragoi2006, Skaggs1996c, Geisler2007} (\autoref{fig:ccgs}). In the dataset used for this study it turned out to be difficult to asses this because of multiple sub-fields expressed by the place cells. It was found that the CCGs had peaks at several time lags, which could be interpreted as the consequence of multiple sub-fields. However, an attempt to overcome this issue was made by dealing with the sub-fields separately.  The CCGs for pairs of overlapping sub-fields were computed by selecting the spikes that were fired only inside the sub-fields to check if the offsets from the different sub-fields can be extracted. But, this had the drawback that only a small subset of spikes were available for computing the CCGs. And no conclusive population statistics could be drawn from this.  \\
+The pairwise analysis was performed with the intention of quantifying invariant features of pairs of place cells expressed either in their firing activity or their spatial receptive fields.\\ To discover how the spatial outlay of the spatial receptive fields of place cells is reflected in their pairwise co-firing characteristics, the offset in the CCGs was compared to the distance between the place field peaks (known as sequence compression) \cite{Dragoi2006, Skaggs1996c, Geisler2007} (\autoref{fig:ccgs}). In the dataset used for this study it turned out to be difficult to asses this because of multiple sub-fields expressed by the place cells. It was found that the CCGs had peaks at several time lags, which could be interpreted as the consequence of multiple sub-fields. However, an attempt to overcome this issue was made by dealing with the sub-fields separately.  The CCGs for pairs of overlapping sub-fields were computed by selecting the spikes that were fired only inside the sub-fields to check if the offsets from the different sub-fields can be extracted. But, this had the drawback that only a small subset of spikes were available for computing the CCGs and no conclusive population statistics could be drawn from this.  \\
 
-The relative firing characteristics of pairs of place cells with overlapping place fields in at least one of  two or more distinct environments were computed. For every pair of cell with overlapping place fields, it was tested whether the the time offset in the spike time correlations is preserved across environments. From the available data, there no such invariant relationship  was found.  \\
+The relative firing characteristics of pairs of place cells with overlapping place fields in at least one of two or more distinct environments were computed. For every pair of cell with overlapping place fields, it was tested whether the the time offset in the spike time correlations is preserved across environments. From the available data, no such relationship was found.  \\
 The examination of cells that were active in environments with different topologies showed that, the distance of between the place field peaks was not preserved. (Fig: \ref{fig:pkDist}).
 
 
@@ -251,7 +251,9 @@ SWS is interspersed by epochs of highly synchronous activity, which comprises a 
 \caption[Pre and post trial sleep events CA3]{The fraction of significant cell sequences in pre and post trial sleep in CA3 place cell population, \subref{fig:p2psf1} Individual trials, \subref{fig:p2psf2} Fraction for all trials, the was no difference found between the number of re/pre-activations ((\emph{Sign Test, p = 0.625})).}
 \label{fig:pre2postca3}
 \end{figure}
-The template matching analysis detected 4.45\% (68 out of 1527 pre-trial sleep population events) as significantly correlated (at $ \alpha $ = $0.025$) with awake sequences and 2.24\% (30 out of 1337 post-trial sleep events) in the CA3 place cell population (Fig: \ref{tmcorr} ). In CA1 cell population, 4.34\% (1047 out of 32396 pre-trial sleep population events) were significantly correlated (at $ \alpha $ = $0.025$) with awake sequences and 2.22\% (298 out of 13407 post-trial sleep events). The number of significantly correlated events are expected to increase in the sleep after exploration on the linear track. But, in this data set there was no significant increase in replay events in the CA3 population (Fig: \ref{fig:pre2postca3} \subref{fig:p2psf2}) (\emph{Sign Test, p = 0.625}). On the contrary, there was a significant decrease in replay events in CA1 population (Fig: \ref{fig:pre2postca1} \subref{fig:p2pca1sf2}) (\emph{Sign Test, p =  1.13} x $\emph{10}^{-4}$)).
+The template matching analysis detected 4.45\% (68 out of 1527 pre-trial sleep population events) as significantly correlated (at $ \alpha $ = $0.025$) with awake sequences and 2.24\% (30 out of 1337 post-trial sleep events) in the CA3 place cell population (Fig: \ref{tmcorr} ). In CA1 cell population, 4.34\% (1047 out of 32396 pre-trial sleep population events) were significantly correlated (at $ \alpha $ = $0.025$) with awake sequences and 2.22\% (298 out of 13407 post-trial sleep events). The number of significantly correlated events are expected to increase in the sleep after exploration on the linear track. But, in this data set there was no significant increase in replay events in the CA3 population (Fig: \ref{fig:pre2postca3} \subref{fig:p2psf2}) (\emph{Sign Test, p = 0.625}). On the contrary, there was a significant decrease in replay events in CA1 population (Fig: \ref{fig:pre2postca1} \subref{fig:p2pca1sf2}) (\emph{Sign Test, p =  1.13} x $\emph{10}^{-4}$)).\\
+
+To evaluate the reliability of sequences occurring within sleep which were not correlated with the awake sequences, the correlation matrix of all the sequence was computed. Then, the time course of the significant sequences was characterized (Fig: \ref{fig:slpseq}). 
 
 %%-----------------------------------------------
 %% pre-2-post CA1
@@ -273,6 +275,29 @@ The template matching analysis detected 4.45\% (68 out of 1527 pre-trial sleep p
 \caption[Pre and post trial sleep events CA1]{The fraction of significant cell sequences in pre and post trial sleep in CA1 place cell population. Each data point represents a complete recording session. \subref{fig:p2pca1sf1} Fractions of significant events in individual trials, \subref{fig:p2pca1sf2} Fraction for all trials combined. The difference was found to be significant (\emph{Sign Test, p = 1.13} x $\emph{10}^{-4}$)}
 \label{fig:pre2postca1}
 \end{figure}
+
+%%-----------------------------------------------
+%% sleep sequences
+%%-----------------------------------------------
+\begin{figure}[H!]
+\centering
+\subfigure[]{
+\includegraphics[scale=1]{../figures/report/sampleSlopeSeqCorr.pdf}
+\label{fig:sssf1}
+}
+\subfigure[]{
+\includegraphics[scale=1]{../figures/report/PoolSeqCorr_signf.pdf}
+\label{fig:sssf2}
+}
+\subfigure[]{
+\includegraphics[scale=1]{../figures/report/SlopeDistrPrePost.pdf}
+\label{fig:sssf3}
+}
+\caption[Sleep Sequences]{The time course of number of reliable sequences that were detected within sleep. \subref{fig:sssf1} The time course of the significant sequences in a single sleep session. The red line show the regression line. \subref{fig:sssf2}  The pooled data. The y-axis is the slope of the regression line, which was fit to the normalized histogram of number of significant sequences. The x-axis is the peak value of the normalized histogram. The size of the markers are proportional to ($1 - p Value$). Each data point is a complete sleep session. \subref{fig:sssf3} Normalized distribution of the slopes.}
+\label{fig:slpseq}
+\end{figure}
+
+
 %The template matching analysis detected detected 4.34 \% (1047 out of 32396 pre-trial sleep population events) as significantly correlated (at $ \alpha $ = $0.025$) with awake sequences and 2.22 \% (298 out of 13407 post-trial sleep events) in the CA1 place cell population (Fig: \ref{tmcorr} ). The number of significantly correlated events are expected to increase in the sleep after exploration on the linear track. On the contrary, in this data set there was a significant decrease in replay events in CA1 population (Fig: \ref{fig:pre2postca1} \subref{fig:p2pca1sf2}) (\emph{Sign Test, p =  1.13} x $\emph{10}^{-4}$)).
 %\section[Sparse encoding]{The neural representation of spatial information is sparse (stats?)}
 %(\# of common cells)
